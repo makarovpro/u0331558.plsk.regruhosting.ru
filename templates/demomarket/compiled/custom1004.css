@@ -1,0 +1,14 @@
+.watsapp_header_1 {
+	width: 100%;
+	display: flex;
+}
+
+.watsapp_header_1_3 {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.watsapp_header_1_3 a {
+	padding: 10px;
+	border: 1px solid #666666;
+}

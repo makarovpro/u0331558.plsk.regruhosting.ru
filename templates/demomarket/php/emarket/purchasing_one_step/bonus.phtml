@@ -1,0 +1,15 @@
+<?php
+/**
+ * Списание и возврат бонусов.
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemomarketPhpExtension $this
+ * @var array $variables
+ */
+
+$paymentAvailable = (array_key_exists('payment', $variables['onestep']) && !empty($variables['onestep']['payment']));
+$bonusIsAvailable = $paymentAvailable && $this->getAvailableBonus();
+?>
+<?php if ($bonusIsAvailable): ?>
+	<?= $this->render($variables, 'emarket/purchasing_one_step/bonus/return_bonus') ?>
+	<?= $this->render($variables, 'emarket/purchasing_one_step/bonus/spend_bonus') ?>
+<?php endif; ?>
